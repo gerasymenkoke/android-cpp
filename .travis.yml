@@ -20,3 +20,5 @@ deploy:
  user: gerasymenkoke
  key: $GITHUB_TOKEN
  file: hello
+ on:
+    all_branches: true
