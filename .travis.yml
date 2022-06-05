@@ -7,11 +7,11 @@ script: pwd
 script: ls
 
 deploy:
- provider:  releases
- skip_cleanup: true
- api_key:  $GITHUB_TOKEN
- file: hello
- on:
+  provider:  releases
+  skip_cleanup: true
+  api_key:  $GITHUB_TOKEN
+  file: hello
+  on:
     tags: false
     all_branches: true
 
