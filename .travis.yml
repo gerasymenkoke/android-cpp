@@ -3,8 +3,8 @@ compiler:
   - gcc
 script:  
     make
-script: pwd 
-script: ls
+# script: pwd 
+# script: ls
 
 deploy:
   provider:  releases
