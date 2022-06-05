@@ -2,7 +2,7 @@ language: cpp
 compiler:
   - gcc
 script:  
-     make
+    make
 script: pwd 
 script: ls
 script: hello
