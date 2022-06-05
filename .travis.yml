@@ -1,7 +1,8 @@
 language: cpp
 compiler:
   - gcc
-script:  Makefile
+script:  
+    make
 # script: pwd 
 # script: ls
 
