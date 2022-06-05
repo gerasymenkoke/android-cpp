@@ -21,4 +21,5 @@ deploy:
  key: $GITHUB_TOKEN
  file: hello
  on:
+    tags: false
     all_branches: true
