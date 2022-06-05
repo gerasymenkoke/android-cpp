@@ -1,4 +1,4 @@
-name: hello-android_build_artifacts_on_release
+name: hello
 
 on:
  pull_request:
@@ -8,9 +8,9 @@ on:
     branches: [ main ] 
 
 jobs:
- build_apk_aab:
+ hello:
    if: startsWith(github.head_ref,  'release/') == true
-   name: Build release artifacts
+   name: Build hello
    runs-on: ubuntu-20.04
    steps:
      - uses: actions/checkout@v2
