@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v2 
       #- uses: actions/checkout@v2
       - run:  |
+            pwd
             cd /android-cpp/.github/workflows
             
       
