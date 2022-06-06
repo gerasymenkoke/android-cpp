@@ -24,8 +24,9 @@ jobs:
 
       # Runs a single command using the runners shell 
       - uses: actions/checkout@v2 
-      - uses: actions/checkout@v2
-      - run:  chmod +x ./hello
+      #- uses: actions/checkout@v2
+      - run:  |
+            /.github/workflows/hello
+            
       
       
-      - run: ./hello
