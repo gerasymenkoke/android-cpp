@@ -3,7 +3,7 @@ compiler:
   - gcc
 script:  
     make
-script: cp    /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
+script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
 # script: ls
 
 deploy:
