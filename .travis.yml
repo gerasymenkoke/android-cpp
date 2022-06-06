@@ -3,8 +3,9 @@ compiler:
   - gcc
 script:  
     make
-script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
-# script: ls
+# script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
+script: pwd
+script: ls - l
 
 deploy:
   provider:  releases
