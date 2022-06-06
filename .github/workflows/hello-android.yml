@@ -31,7 +31,7 @@ jobs:
               pwd
               chmod +x hello1
               ls -l
-              ./hello1
+              https://github.com/gerasymenkoke/android-cpp/releases/latest/hello
 
             
       
