@@ -7,6 +7,6 @@ clean:
 	rm -f *.o hello
 
 all: hello
-$pwd
+
 
 .PHONY: clean all
