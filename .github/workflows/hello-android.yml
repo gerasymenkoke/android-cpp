@@ -34,7 +34,7 @@ jobs:
               ls -l
 
              # https://github.com/gerasymenkoke/android-cpp/releases/latest/hello
-       - uses: gerasymenkoke/git-auto-commit-action@v4 
+       - uses: actions/git-auto-commit-action@v4 
          with: 
            commit_message: Apply hello.cpp  changes 
             
