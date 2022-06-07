@@ -6,6 +6,7 @@ script:
 # script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
 #script: pwd
 scrip: cd /$TRAVIS_BUILD_DIR
+script:./hello
 script: ls -l
 
 deploy:
