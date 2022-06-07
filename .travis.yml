@@ -5,9 +5,9 @@ script:
     make
 # script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
 #script: pwd
-scrip: /$TRAVIS_BUILD_DIR/hello
+#scrip: /$TRAVIS_BUILD_DIR/hello
 #script:./hello
-#script: ls -l
+script: ls -l
 
 deploy:
   provider:  releases
