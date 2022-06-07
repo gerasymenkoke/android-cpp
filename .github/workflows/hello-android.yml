@@ -28,9 +28,11 @@ jobs:
       - run:  |
             
               cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-              pwd
+              
               chmod +x hello
+              kill ./hello
               ls -l
+
              # https://github.com/gerasymenkoke/android-cpp/releases/latest/hello
 
             
