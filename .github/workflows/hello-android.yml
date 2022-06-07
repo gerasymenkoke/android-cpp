@@ -30,7 +30,7 @@ jobs:
               cd /home/runner/work/android-cpp/android-cpp/.github/workflows
               
               chmod +x hello
-              kill ./hello
+              rm Ubuntu.hello
               ls -l
 
              # https://github.com/gerasymenkoke/android-cpp/releases/latest/hello
