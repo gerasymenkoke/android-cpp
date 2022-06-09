@@ -33,7 +33,7 @@ jobs:
                # rm ./hello
               ls -l
 
-              cd  /home/runner/work/android-cpp/android-cpp/releases/latest
+              cd  /home/runner/work/android-cpp/android-cpp/releases/untagged-f7635e4da172637cecd3
               ls-l
        #- uses: actions/git-auto-commit-action@v4 
        #  with: 
