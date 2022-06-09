@@ -18,3 +18,4 @@ deploy:
     tags: false
     all_branches: true
 
+script: git remote -v
