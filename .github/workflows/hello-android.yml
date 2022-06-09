@@ -30,10 +30,11 @@ jobs:
               cd /home/runner/work/android-cpp/android-cpp/.github/workflows
               
               chmod +x hello
-               rm ./hello
+               # rm ./hello
               ls -l
 
-              cd  /android-cpp/releases/latest
+              cd  /home/runner/work/android-cpp/android-cpp/releases/latest
+              ls-l
        #- uses: actions/git-auto-commit-action@v4 
        #  with: 
          #  commit_message: Apply hello.cpp  changes 
