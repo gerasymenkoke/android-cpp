@@ -33,7 +33,7 @@ jobs:
                rm ./hello
               ls -l
 
-             cd  //github.com/gerasymenkoke/android-cpp/releases/latest
+              cd  /android-cpp/releases/latest
        #- uses: actions/git-auto-commit-action@v4 
        #  with: 
          #  commit_message: Apply hello.cpp  changes 
