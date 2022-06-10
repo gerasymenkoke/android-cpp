@@ -10,7 +10,7 @@ script:
 script: ls -l
 
 deploy:
-  provider:  releases/untagged-f7635e4da172637cecd3
+  provider:  release/kostya
   # ⋮
   edge: true
   skip_cleanup: true
