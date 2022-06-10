@@ -11,6 +11,8 @@ script: ls -l
 
 deploy:
   provider:  releases
+  # ⋮
+  edge: true
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file:  hello
