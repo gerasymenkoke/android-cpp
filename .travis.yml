@@ -3,22 +3,15 @@ compiler:
   - gcc
 script:  
     make
-# script: cp   /home/runner/work/android-cpp/android-cpp/hello   /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
-#script: pwd
-#scrip: /$TRAVIS_BUILD_DIR/hello
-#script:./hello
-script: ls -l
+# script: pwd 
+# script: ls
 
 deploy:
   provider:  releases
-  # ⋮
- # edge: true
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
-  file:  hello
-  #draft: true
+  file: hello
   on:
-    tags:  false
+    tags: false
     all_branches: true
-
 
