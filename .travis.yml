@@ -16,9 +16,9 @@ deploy:
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file:  hello
-  draft: true
-  #on:
-  #  tags: true
-  #  all_branches: true
+  #draft: true
+  on:
+    tags: true
+    all_branches: true
 
 
