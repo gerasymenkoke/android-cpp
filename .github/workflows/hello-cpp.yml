@@ -29,15 +29,13 @@ jobs:
             
               cd /home/runner/work/android-cpp/android-cpp/.github/workflows
               
-              chmod +x hello
+              # chmod +x hello
                # rm ./hello
               ls -l
 
-              #cd  /home/runner/work/android-cpp/android-cpp/releases/untagged-f7635e4da172637cecd3
-              #ls-l
-       #- uses: actions/git-auto-commit-action@v4 
-       #  with: 
-         #  commit_message: Apply hello.cpp  changes 
-            
-      
+      - uses: actions/upload-release-asset@v1
+       env: 
+         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+       with:
+         upload_url: ${{steps.create-new-release.outputs.upload_url}}
       
