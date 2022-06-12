@@ -37,5 +37,5 @@ jobs:
      - name: Stash file containing the release URL as an artifact
        uses: actions/upload-release-asset@v1.0.2
        with:
-        name: release-url
+        name: release/url.txt
         path: ./release
