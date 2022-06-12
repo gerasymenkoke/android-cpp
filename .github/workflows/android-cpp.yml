@@ -30,13 +30,12 @@ jobs:
              # rm ./hello
              pwd
              ls -l
-     - name: Upload Release Asset
-       id: Upload-release-asset 
-       uses: actions/upload-release-asset@v1.0.2
-       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     - name: Copy release URL into file
+       run: |
+         mkdir release
+         printf "%s" "${{ steps.create_release.outputs.upload_url }}" > release/url.txt
+     - name: Stash file containing the release URL as an artifact
+       uses: actions/upload-artifact@v1.0.2
        with:
-          upload_url: ${{ steps.get_release.outputs.upload_url }}
-          asset_path: ./${{ env.PROJECT_NAME }}.zip
-          asset_name: ${{ env.PROJECT_NAME }}.zip
-          asset_content_type: hello/zip
+        name: release-url
+        path: ./release
