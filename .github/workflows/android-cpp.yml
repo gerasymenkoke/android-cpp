@@ -34,7 +34,7 @@ jobs:
        run: |
          mkdir release
          printf "%s" "${{ steps.create_release.outputs.upload_url }}" > release/url.txt
-         #cd /release
+         cd /home/runner/work/android-cpp/android-cpp/release
          pwd
          ls -l
          print url.txt
