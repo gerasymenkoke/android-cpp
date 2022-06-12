@@ -34,7 +34,10 @@ jobs:
        run: |
          mkdir release
          printf "%s" "${{ steps.create_release.outputs.upload_url }}" > release/url.txt
-         printf release/url.txt > stdout
+         cd /release
+         pwd
+         ls -l
+         print url.txt
      - name: Stash file containing the release URL as an artifact
        uses: actions/upload-release-asset@v1.0.2
        env:
