@@ -29,4 +29,4 @@ jobs:
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             ls -l
             chmod +x hello
-            /home/runner/work/android-cpp/android-cpp/.github/workflows/hello
+            ./hello
