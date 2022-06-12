@@ -18,24 +18,20 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job 
-    steps: 
+  steps: 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it 
       #- uses: actions/checkout@v2
-
       # Runs a single command using the runners shell 
-        uses: actions/checkout@v2 
+      uses: actions/checkout@v2 
       
-        run:  |
-            
-              cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-              
-              # chmod +x hello
-               # rm ./hello
-              ls -l
-
-         uses: actions/upload-release-asset@v1
-         env: 
-         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-         with:
-         upload_url: ${{steps.create-new-release.outputs.upload_url}}
+      run: |
+             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
+             # chmod +x hello
+             # rm ./hello
+             ls -l
+             uses: actions/upload-release-asset@v1
+             env: 
+               GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+               with:
+               upload_url: ${{steps.create-new-release.outputs.upload_url}}
       
