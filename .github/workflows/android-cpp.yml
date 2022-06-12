@@ -30,23 +30,5 @@ jobs:
              # rm ./hello
              pwd
              ls -l
-     - name: Copy release URL into file
-       run: |
-         mkdir release
-         printf "%s" "${{ steps.create_release.outputs.upload_url }}" > release/url.txt
-         cd /home/runner/work/android-cpp/android-cpp/release
-         pwd
-         ls -l
-         cat url.txt
-     - name: Stash file containing the release URL as an artifact
-       uses: actions/upload-release-asset@v1.0.2
-       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     - name: Upload ftp
-       uses: android-cpp/ftp-action@releases/v1.0.2
-       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "android-cpp/.github/workflows"
-        remoteDir: "www"
+             wget  -P /home/runner/work/android-cpp/android-cpp/.github/workflows/ "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2"             
+    
