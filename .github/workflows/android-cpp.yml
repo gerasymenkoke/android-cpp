@@ -25,10 +25,8 @@ jobs:
      - uses: actions/checkout@v2 
       
      - run: |
-             #cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-             # chmod +x hello
-             # rm ./hello
-             pwd
-             ls -l
-             wget  -P /home/runner/work/android-cpp/android-cpp/.github/workflows/ "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2"             
-    
+            wget  -P /home/runner/work/android-cpp/android-cpp/.github/workflows/ "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2"             
+            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
+            ls -l
+            chmod +x hello
+            ./hello
