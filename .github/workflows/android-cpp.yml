@@ -43,8 +43,7 @@ jobs:
        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with:
-          upload_url: "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2"          
-          #${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2"
-          asset_name: "https://github.com/gerasymenkoke/android-cpp/releases/tag/v1.0.2/hello"
-          asset_content_type: application
+        upload_url: ${{ steps.get_release_url.outputs.URL }}
+        asset_path: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_PATH }}
+        asset_name: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_NAME }}
+        asset_content_type: application/gzip
