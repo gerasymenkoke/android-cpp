@@ -37,6 +37,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with:
           upload_url: ${{ steps.get_release.outputs.upload_url }}
-          asset_path: ./target/release/my-widget
-          asset_name: my-widget
-          asset_content_type: application/octet-stream
+          # asset_path: ./target/release/my-widget
+          # asset_name: hello
+          # asset_content_type: application/octet-stream
