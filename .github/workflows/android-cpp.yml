@@ -42,8 +42,11 @@ jobs:
        uses: actions/upload-release-asset@v1.0.2
        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     - name: Upload ftp
+       uses: android-cpp/ftp-action@releases/v1.0.2
        with:
-        upload_url: ${{ steps.get_release_url.outputs.URL }}
-        asset_path: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_PATH }}
-        asset_name: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_NAME }}
-        asset_content_type: application/gzip
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "android-cpp/.github/workflows"
+        remoteDir: "www"
