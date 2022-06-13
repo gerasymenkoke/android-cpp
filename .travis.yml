@@ -8,12 +8,10 @@ script:
 
 deploy:
   provider:   releases
-  body: |
-         V1.0.2
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file: hello
   on:
-    tags: V1.0.2
+    tags: "v1.0.2" 
     all_branches: true
 
