@@ -8,6 +8,8 @@ script:
 
 deploy:
   provider:   releases
+  body: |
+         V1.0.2
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file: hello
