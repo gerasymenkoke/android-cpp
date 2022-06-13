@@ -1,4 +1,4 @@
-language: cpp
+Ylanguage: cpp
 compiler:
   - gcc
 script:  
@@ -7,11 +7,11 @@ script:
 # script: ls
 
 deploy:
-  provider:   releases
+  provider:   releases/V1.0.2
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file: hello
   on:
-    tags: "v1.0.2" 
+     # tags: "v1.0.2" 
     all_branches: true
 
