@@ -4,7 +4,7 @@ compiler:
 script:  
     make
 # script: pwd 
-# script: ls
+script: git tag
 
 deploy:
   provider:   releases/V1.0.2
