@@ -14,5 +14,5 @@ deploy:
   on:
      # tags: "v1.0.2" 
     all_branches: true
-script: git tag --sort=committerdate
+script: git tag --sort=committerdate | t
 
