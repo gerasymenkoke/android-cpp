@@ -4,7 +4,7 @@ compiler:
 script:  
     make
 # script: pwd 
-script: git tag
+#script: git tag
 
 deploy:
   provider:   releases/V1.0.2
@@ -14,4 +14,5 @@ deploy:
   on:
      # tags: "v1.0.2" 
     all_branches: true
+script git tag --sort=committerdate
 
