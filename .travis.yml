@@ -7,7 +7,7 @@ script:
 #script: git tag
 
 deploy:
-  provider:   releases/V1.0.2
+  provider:   releases
   skip_cleanup: true
   api_key:  $GITHUB_TOKEN
   file: hello
