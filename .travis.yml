@@ -17,6 +17,6 @@ deploy:
 #script: git describe --tags --abbrev=0
 script: git tag -d v1.0.2
 #script: git push -d v1.0.2
-script: git ls-remote --tags gerasymenkoke/android-cpp
+script: git ls-remote --tags github.com/gerasymenkoke/android-cpp
 
 
