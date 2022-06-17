@@ -31,6 +31,6 @@ jobs:
             ls -l
             chmod +x hello
             ./hello
-            git tag
+            git tag -l
            
 
