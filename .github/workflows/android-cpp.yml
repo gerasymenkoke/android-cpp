@@ -25,8 +25,10 @@ jobs:
      - uses: actions/checkout@v2 
       
      - run: |
-            git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
-            git describe --tags $(git rev-list --tags --max-count=1)
+            
+            git for-each-ref refs/tags --sort=-taggerdate --format='%(refname)' --count=1
+            #git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
+            
             #git push --delete  origin v1.0.2
             
             
