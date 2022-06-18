@@ -21,10 +21,13 @@ deploy:
  # script: git  push --delete https://github.com/gerasymenkoke/android-cpp v1.0.2
 
 # git remote set-url origin https://GITHUB_TOKEN@github.com/gerasymenkoke/android-cpp.git
-script: git push --delete  origin v1.0.2 
+#script: git push --delete  origin v1.0.2 
 
 
 #script: git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
 
 # script: git remote add origin https://github.com/gerasymenkoke:access-token@github.com/gerasymenkoke/android-cpp111
 
+cd clonedrepofolder
+git remote rm origin
+git remote add origin https://https://username:${GH_TOKEN}@github.com/username/repo.git
