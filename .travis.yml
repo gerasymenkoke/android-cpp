@@ -13,16 +13,16 @@ deploy:
   file: hello
   
   on:
-     # tags: "v1.0.2" 
+    tags: false
     all_branches: true
 #script: git describe --tags --abbrev=0
 #script: git tag -d v1.0.2
 #script: git push -d v1.0.2
  # script: git  push --delete https://github.com/gerasymenkoke/android-cpp v1.0.2
-#username: gerasymenkoke
-#password: $GITHUB_TOKEN
+username: gerasymenkoke
+password: $GITHUB_TOKEN
 
-script: git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
-# script: git push --delete https://github.com/gerasymenkoke/android-cpp v1.0.2
+#script: git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
+script: git push --delete https://github.com/gerasymenkoke/android-cpp/release/v1.0.2
 # script: git remote add origin https://github.com/gerasymenkoke:access-token@github.com/gerasymenkoke/android-cpp111
 
