@@ -15,8 +15,8 @@ deploy:
   on:
     tags: false
     all_branches: true
-#script: git describe --tags --abbrev=0
-#script: git tag -d v1.0.2
+# script: git describe --tags --abbrev=0
+script: git tag -d v1.0.2
 #script: git push -d v1.0.2
  # script: git  push --delete https://github.com/gerasymenkoke/android-cpp v1.0.2
 
