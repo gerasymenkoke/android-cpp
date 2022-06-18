@@ -25,7 +25,8 @@ jobs:
      - uses: actions/checkout@v2 
       
      - run: |
-            git tag -l 
+            git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
+ 
             #git push --delete  origin v1.0.2
             
             
