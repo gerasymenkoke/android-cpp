@@ -27,9 +27,7 @@ jobs:
      - run: |
             
             git push --delete  origin v1.0.2
-            # git tag -l                   # to list the tags
-            # git checkout tags/v1.0.2   # to switch to the desired tag
-            #git ls-remote --tags git://git.openssl.org/openssl.git  
+            
             #git tag -l
             #wget  -P /home/runner/work/android-cpp/android-cpp/.github/workflows/ "https://github.com/gerasymenkoke/android-cpp/releases/download/v1.0.2/hello"             
             #cd /home/runner/work/android-cpp/android-cpp/.github/workflows
