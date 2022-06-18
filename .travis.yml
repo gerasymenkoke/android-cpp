@@ -19,10 +19,12 @@ deploy:
 #script: git tag -d v1.0.2
 #script: git push -d v1.0.2
  # script: git  push --delete https://github.com/gerasymenkoke/android-cpp v1.0.2
-username: gerasymenkoke
-password: $GITHUB_TOKEN
+
+git remote set-url origin https://GITHUB_TOKEN@github.com/gerasymenkoke/android-cpp.git
+script: git push --delete  origin v1.0.2 
+
 
 #script: git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
-script: git push --delete  origin v1.0.2 
+
 # script: git remote add origin https://github.com/gerasymenkoke:access-token@github.com/gerasymenkoke/android-cpp111
 
