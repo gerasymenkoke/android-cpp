@@ -26,7 +26,7 @@ jobs:
       
      - run: |
             
-            # git push --delete  origin v1.0.2
+            #  git push --delete  origin v1.0.2
             git describe --tags --abbrev=0
             
             #git tag -l
