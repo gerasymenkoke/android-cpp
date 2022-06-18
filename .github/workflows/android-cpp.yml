@@ -27,7 +27,7 @@ jobs:
      - run: |
             
             git remote update
-            git describe --tags --abbrev=0
+            git remote tag --sort=committerdate | tail -1
             #git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
             
             #git push --delete  origin v1.0.2
