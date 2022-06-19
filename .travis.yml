@@ -5,7 +5,8 @@ script:
     make
 # script: pwd 
 #script: git tag
-script: git push --delete  origin v1.0.0 
+before_deploy:
+git push --delete  origin v1.0.0 
 
 deploy:
   provider:   releases
