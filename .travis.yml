@@ -8,7 +8,7 @@ script:
 before_deploy:
 #git remote set-url origin https://GITHUB_TOKEN@github.com/gerasymenkoke/android-cpp.git
 #- git tag -d https://github.com/gerasymenkoke/android-cpp.git/V1.0.0 
-- git push origin :v1.0.0
+- git push origin https://github.com/gerasymenkoke/android-cpp.git:V1.0.0
 
 deploy:
   provider:   releases
