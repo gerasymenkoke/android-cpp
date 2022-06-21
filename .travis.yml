@@ -6,8 +6,7 @@ script:
 # script: pwd 
 #script: git tag
 before_deploy:
-git clone https://github.com/gerasymenkoke/android-cpp.git/V1.0.0
-
+git remote -v
 #git remote set-url origin https://GITHUB_TOKEN@github.com/gerasymenkoke/android-cpp.git
 #- git tag -d https://github.com/gerasymenkoke/android-cpp.git/V1.0.0 
 #- git push --delete  https://github.com/gerasymenkoke/android-cpp.git:V1.0.0
