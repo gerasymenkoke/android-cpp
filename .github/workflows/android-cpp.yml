@@ -25,7 +25,7 @@ jobs:
      - uses: actions/checkout@v2 
       
      - run: |
-            pwd
+            #pwd
             ls -l
             #./make
             #git remote update
