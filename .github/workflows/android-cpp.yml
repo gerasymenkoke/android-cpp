@@ -28,7 +28,7 @@ jobs:
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
             ls -l
-            #./make
+            ./make
             #git remote update
             #git remote tag --sort=committerdate | tail -1
             #git ls-remote --tags https://github.com/gerasymenkoke/android-cpp
