@@ -29,7 +29,7 @@ jobs:
             pwd
             ls -l
             chmod +x hello
-            gcc hello.cpp -o hello
+            g++ hello.cpp -o hello
             
             #git remote update
             #git remote tag --sort=committerdate | tail -1
