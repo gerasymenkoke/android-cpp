@@ -28,7 +28,7 @@ jobs:
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
             ls -l
-            chmod +x ./hello
+            #chmod +x hello.cpp
             g++ hello.cpp -o hello
             
             #git remote update
