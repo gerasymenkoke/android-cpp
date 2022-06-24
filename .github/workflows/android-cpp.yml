@@ -41,10 +41,10 @@ jobs:
             #git tag -l
             #wget  -P /home/runner/work/android-cpp/android-cpp/.github/workflows/ "https://github.com/gerasymenkoke/android-cpp/releases/download/v1.0.2/hello"             
             #cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-            #pwd 
-            #ls -l
-            #chmod +x hello
-            #./hello
+            pwd 
+            ls -l
+            chmod +x hello
+            ./hello
             
            
 
