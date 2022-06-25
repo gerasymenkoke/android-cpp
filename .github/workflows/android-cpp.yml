@@ -24,16 +24,7 @@ jobs:
       # Runs a single command using the runners shell 
      
      - uses: actions/checkout@v2 
-     - uses: actions/create-release@latest
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            ${{ steps.Changelog.outputs.changelog }}
-          draft: false
-          prerelease: true
+     
      - run: |
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
@@ -44,5 +35,14 @@ jobs:
             chmod +x hello
             ./hello 
       
-           
+     - uses: actions/create-release@latest
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ${{ steps.Changelog.outputs.changelog }}
+          draft: false
+          prerelease: false     
 
