@@ -26,20 +26,6 @@ jobs:
      
 
      - uses: actions/checkout@v2 
-     
-     - run: |
-            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-            pwd
-            ls -l
-            gcc hello.c -o hello
-            pwd 
-            ls -l
-            chmod +x hello
-            ./hello
-     
-     
-     
-     
      - uses: actions/create-release@latest
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,7 +38,15 @@ jobs:
           prerelease: false
           file: hello
      
-      
+     - run: |
+            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
+            pwd
+            ls -l
+            gcc hello.c -o hello
+            pwd 
+            ls -l
+            chmod +x hello
+            ./hello 
       
            
 
