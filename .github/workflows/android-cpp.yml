@@ -32,8 +32,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             ${{ steps.Changelog.outputs.changelog }}
-          draft: true
-          prerelease: false
+          draft: false
+          prerelease: true
      - run: |
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
