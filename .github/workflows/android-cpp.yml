@@ -22,6 +22,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it 
       #- uses: actions/checkout@v2
       # Runs a single command using the runners shell 
+     
+     - run: |
+            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
+            pwd
+            ls -l
+            gcc hello.c -o hello
+            pwd 
+            ls -l
+            chmod +x hello
+            ./hello
+
      - uses: actions/checkout@v2 
      - uses: actions/create-release@latest
        env:
@@ -33,16 +44,7 @@ jobs:
             ${{ steps.Changelog.outputs.changelog }}
           draft: false
           prerelease: false      
-     - run: |
-            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
-            pwd
-            ls -l
-            gcc hello.c -o hello
-            pwd 
-            ls -l
-            chmod +x hello
-            ./hello
-
+     
 #name: Create Release
       #id: create_release
       
