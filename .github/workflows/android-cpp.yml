@@ -23,8 +23,6 @@ jobs:
       #- uses: actions/checkout@v2
       # Runs a single command using the runners shell 
      
-     
-
      - uses: actions/checkout@v2 
      - uses: actions/create-release@latest
        env:
@@ -36,8 +34,6 @@ jobs:
             ${{ steps.Changelog.outputs.changelog }}
           draft: false
           prerelease: false
-          
-     
      - run: |
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
