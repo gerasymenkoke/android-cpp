@@ -46,7 +46,7 @@ jobs:
             chmod +x hello
             ./hello
 
-name: Create Release
+- name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
