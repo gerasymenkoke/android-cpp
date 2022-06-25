@@ -37,7 +37,7 @@ jobs:
             cd /home/runner/work/android-cpp/android-cpp/.github/workflows
             pwd
             ls -l
-            g++ hello.c -o hello
+            gc hello.c -o hello
             pwd 
             ls -l
             chmod +x hello
