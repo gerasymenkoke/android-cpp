@@ -46,5 +46,6 @@ jobs:
             ls -l
             chmod +x hello
             ./hello 
+            cp ./hello /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
       
     
