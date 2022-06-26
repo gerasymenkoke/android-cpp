@@ -41,6 +41,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
             filename: site.zip     
+            exclusions: '*.git*'
                
       - name: Create new release
         id: create-new-release
