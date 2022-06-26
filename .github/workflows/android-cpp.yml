@@ -31,8 +31,7 @@ jobs:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
           body: |
-           # ${{ steps.Changelog.outputs.changelog }}
-            run_number
+                run_number
           draft: false
           prerelease: false     
 
@@ -42,10 +41,11 @@ jobs:
             pwd
             ls -l
             gcc hello.c -o hello
+            cp ./hello /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
             pwd 
             ls -l
             chmod +x hello
             ./hello 
-            cp ./hello /home/runner/work/android-cpp/android-cpp/.github/workflows/hello1
+            
       
     
