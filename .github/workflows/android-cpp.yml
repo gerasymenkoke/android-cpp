@@ -32,9 +32,7 @@ jobs:
           release_name: Release ${{ github.run_number }}
           body: |
            # ${{ steps.Changelog.outputs.changelog }}
-            Changes in this Release
-            - First Change
-            - Second Change
+            run_number
           draft: false
           prerelease: false     
 
