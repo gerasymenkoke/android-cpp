@@ -33,7 +33,7 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-    - name: Create GITHUB release
+    - name: Create new release
       id: create-new-release
       uses: actions/create-release@latest
       env:
