@@ -33,7 +33,7 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           zip  /home/runner/work/android-cpp/android-cpp/.github/workflows/hello
+           zip  -r hello.zip  hello
            
    # - name: Download artifact
    #   uses: actions/download-artifact@v3
