@@ -36,11 +36,11 @@ jobs:
            
     - name: Download artifact
       uses: actions/download-artifact@v3
-       with:
+      with:
             name: static-site 
-     - name: Archive site content
-       uses: thedoctor0/zip-release@master
-       with:
+    - name: Archive site content
+      uses: thedoctor0/zip-release@master
+      with:
             filename: site.zip     
                
     - name: Create new release
