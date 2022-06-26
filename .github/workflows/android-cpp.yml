@@ -1,17 +1,16 @@
 # This is a basic workflow to help you get started with Actions
-
- name: CI
+name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the develop branch 
- on: 
+on: 
   push: 
     branches: [ main ] 
   pull_request: 
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel 
- jobs: 
+jobs: 
   # This workflow contains a single job called "build" 
     android-cpp: 
     # The type of runner that the job will run on 
@@ -35,8 +34,8 @@
            ./hello 
            zip  -r site.zip  hello
            
-     - name: Download artifact
-       uses: actions/download-artifact@v3
+    - name: Download artifact
+      uses: actions/download-artifact@v3
        with:
             name: static-site 
      - name: Archive site content
