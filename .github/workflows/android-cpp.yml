@@ -33,15 +33,16 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
+           zip --junk -paths my-artifact
            
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-           name: static-site 
-    - name: Archive site content
-      uses: thedoctor0/zip-release@master
-      with:
-           filename: site.zip     
+   # - name: Download artifact
+   #   uses: actions/download-artifact@v3
+   #   with:
+   #        name: static-site 
+   # - name: Archive site content
+   #   uses: thedoctor0/zip-release@master
+   #   with:
+   #        filename: site.zip     
                
     - name: Create new release
       id: create-new-release
