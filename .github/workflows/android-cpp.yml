@@ -33,7 +33,7 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           zip --junk-paths my-artifact
+           zip --junk-paths hello
            
    # - name: Download artifact
    #   uses: actions/download-artifact@v3
@@ -63,8 +63,8 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./site.zip
-         asset_name: site-v${{ github.run_number }}.zip
+         asset_path: ./hello.zip
+         asset_name: hello-v${{ github.run_number }}.zip
          asset_content_type: application/zip
     
             
