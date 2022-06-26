@@ -33,16 +33,16 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           zip  -r hello.zip  hello
+           zip  -r site.zip  hello
            
-   # - name: Download artifact
-   #   uses: actions/download-artifact@v3
-   #   with:
-   #        name: static-site 
-   # - name: Archive site content
-   #   uses: thedoctor0/zip-release@master
-   #   with:
-   #        filename: site.zip     
+     - name: Download artifact
+       uses: actions/download-artifact@v3
+       with:
+            name: static-site 
+     - name: Archive site content
+       uses: thedoctor0/zip-release@master
+       with:
+            filename: site.zip     
                
     - name: Create new release
       id: create-new-release
@@ -63,8 +63,8 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./hello.zip
-         asset_name: hello-v${{ github.run_number }}.zip
+         asset_path: ./site.zip
+         asset_name: site-v${{ github.run_number }}.zip
          asset_content_type: application/zip
     
             
