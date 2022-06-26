@@ -37,10 +37,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
             name: site.zip 
-      - name: Archive site content
-        uses: thedoctor0/zip-release@master
-        with:
-            filename: site.zip     
+     # - name: Archive site content
+     #   uses: thedoctor0/zip-release@master
+     #   with:
+     #      filename: site.zip     
                
       - name: Create new release
         id: create-new-release
