@@ -11,19 +11,18 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel 
 jobs: 
+   update_tag:
   # This workflow contains a single job called "build" 
-    android-cpp: 
-    # The type of runner that the job will run on 
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
     
     # Steps represent a sequence of tasks that will be executed as part of the job 
-    steps: 
+      steps: 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it 
       #- uses: actions/checkout@v2
       # Runs a single command using the runners shell 
-    - uses: actions/checkout@v2
-    - name: build
-      run: |
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
            pwd
            ls -l
@@ -34,21 +33,21 @@ jobs:
            ./hello 
            zip  -r site.zip  hello
            
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
             name: static-site 
-    - name: Archive site content
-      uses: thedoctor0/zip-release@master
-      with:
+      - name: Archive site content
+        uses: thedoctor0/zip-release@master
+        with:
             filename: site.zip     
                
-    - name: Create new release
-      id: create-new-release
-      uses: actions/create-release@latest
-      env:
+      - name: Create new release
+        id: create-new-release
+        uses: actions/create-release@latest
+        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
+        with:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
           body: |
@@ -56,11 +55,11 @@ jobs:
           draft: false
           prerelease: false     
 
-    - name: Upload release asset
-      uses: actions/upload-release-asset@v1
-      env:
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:  
+        with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
          asset_path: ./site.zip
          asset_name: site-v${{ github.run_number }}.zip
