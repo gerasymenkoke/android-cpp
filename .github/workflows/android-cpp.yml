@@ -58,7 +58,7 @@ jobs:
       
       - name: copy
         run: |
-              cp /home/runner/work/android-cpp/android-cpp/.github/workflows/hello   /android-cpp/releases/download/${{ github.run_number }}
+              cp /home/runner/work/android-cpp/android-cpp/.github/workflows/hello   /android-cpp/releases/download/${{ github.run_number }}/hello
         
         
       #- name: Upload release asset
