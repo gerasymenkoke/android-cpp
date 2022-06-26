@@ -31,17 +31,17 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-          # zip  -r site.zip  hello
+           cp hello https://github.com/gerasymenkoke/android-cpp/releases/download/${{ github.run_number }}/hello
            
      # - name: Download artifact
      #   uses: actions/download-artifact@v3
      #   with:
      #       name: site.zip 
-      - name: Archive site content
-        uses: thedoctor0/zip-release@master
-        with:
-            filename: site.zip     
-            exclusions: ' *.cpp / *.c /*.yml  / .git'  
+     # - name: Archive site content
+     #   uses: thedoctor0/zip-release@master
+     #   with:
+     #       filename: site.zip     
+     #       exclusions: ' *.cpp / *.c /*.yml  / .git'  
                
       - name: Create new release
         id: create-new-release
@@ -56,15 +56,15 @@ jobs:
           draft: false
           prerelease: false     
 
-      - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:  
-         upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./site.zip
-         asset_name: site-v${{ github.run_number }}.zip
-         asset_content_type: application/zip
+      #- name: Upload release asset
+      #  uses: actions/upload-release-asset@v1
+      #  env:
+      #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:  
+      #   upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
+      #   asset_path: ./site.zip
+      #   asset_name: site-v${{ github.run_number }}.zip
+      #   asset_content_type: application/zip
     
             
       
