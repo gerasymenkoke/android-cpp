@@ -33,7 +33,7 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           zip --junk-paths hello
+           zip  hello
            
    # - name: Download artifact
    #   uses: actions/download-artifact@v3
