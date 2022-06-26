@@ -41,7 +41,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
             filename: site.zip     
-            exclusions: ' *.cpp / *.c' 
+            exclusions: ' *.cpp / *.c /*.yml  / .git'  
                
       - name: Create new release
         id: create-new-release
