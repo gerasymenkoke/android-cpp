@@ -24,6 +24,7 @@ jobs:
       # Runs a single command using the runners shell 
      
      - uses: actions/checkout@v2 
+     - id: create-new-release
      - uses: actions/create-release@latest
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
