@@ -58,7 +58,7 @@ jobs:
       
       - name: copy
         run: |
-              cp hello https://github.com/gerasymenkoke/android-cpp/releases/download/${{ github.run_number }}/hello
+              cp hello https://github.com/gerasymenkoke/android-cpp/releases/download/${{ github.run_number }}
         
         
       #- name: Upload release asset
