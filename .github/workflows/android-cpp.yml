@@ -31,8 +31,10 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           
-           
+           git add -f /home/runner/work/android-cpp/android-cpp/.github/workflows/hello
+           git commit
+           git push
+
      # - name: Download artifact
      #   uses: actions/download-artifact@v3
      #   with:
