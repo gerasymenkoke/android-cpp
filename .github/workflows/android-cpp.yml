@@ -59,7 +59,7 @@ jobs:
      - name: copy
        run: |
              pwd
-             cd /android-cpp/releases/download/${{ github.run_number }}/hello
+             #cd /android-cpp/releases/download/${{ github.run_number }}/hello
         
         
     #  - name: Upload release asset
