@@ -56,8 +56,8 @@ jobs:
           draft: false
           prerelease: false     
       
-     - name: copy
-       run: |
+      - name: copy
+        run: |
              pwd
              #cd /android-cpp/releases/download/${{ github.run_number }}/hello
         
