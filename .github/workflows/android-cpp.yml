@@ -61,15 +61,15 @@ jobs:
      #        cp /home/runner/work/android-cpp/android-cpp/.github/workflows/hello   /android-cpp/releases/download/${{ github.run_number }}/hello
         
         
-      #- name: Upload release asset
-      #  uses: actions/upload-release-asset@v1
-      #  env:
-      #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #  with:  
-      #   upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-      #   asset_path: ./site.zip
-      #   asset_name: site-v${{ github.run_number }}.zip
-      #   asset_content_type: application/zip
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:  
+         upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
+         #asset_path: ./
+         asset_name:  hello-v${{ github.run_number }}
+         asset_content_type: application
     
             
       
