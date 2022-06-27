@@ -54,11 +54,17 @@ jobs:
           body: |
                 run_number
           draft: false
-          prerelease: false     
+          prerelease: false    
+       
+     -  uses: AButler/upload-release-assets@v2.0
+        with:
+          files: 'hello'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+ 
       
-      - name: copy
-        run: |
-             pwd
+     # - name: copy
+      # run: |
+        #     pwd
              #cd /android-cpp/releases/download/${{ github.run_number }}/hello
         
         
