@@ -31,9 +31,12 @@ jobs:
            ls -l
            chmod +x hello
            ./hello 
-           git add -f /home/runner/work/android-cpp/android-cpp/.github/workflows/hello
-           git commit
-           git push
+           
+           binary <- "~/Downloads/clipboard.exe"
+
+
+           
+           
 
      # - name: Download artifact
      #   uses: actions/download-artifact@v3
@@ -62,7 +65,7 @@ jobs:
       - name: AButler
         uses: AButler/upload-release-assets@v2.0
         with:
-          files: 'hello'
+          files: 'hello.c'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
  
       
