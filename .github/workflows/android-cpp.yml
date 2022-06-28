@@ -80,7 +80,7 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path:./hello.zip
+         asset_path: ./hello.zip
          asset_name:  hello-v${{ github.run_number }}
          asset_content_type: application
     
