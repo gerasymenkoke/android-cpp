@@ -44,7 +44,7 @@ jobs:
       - name: Archive site content
         uses: thedoctor0/zip-release@master
         with:
-            filename: hello.zip     
+            filename: site.zip     
      #       exclusions: ' *.cpp / *.c /*.yml  
                
       - name: Create new release
@@ -80,8 +80,8 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./hello.zip
-         asset_name:  hello-v${{ github.run_number }}
+         asset_path: ./site.zip
+         asset_name:  site-v${{ github.run_number }}
          asset_content_type: application
     
             
