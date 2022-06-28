@@ -39,7 +39,7 @@ jobs:
 
       - name: Download artifact
         uses: actions/download-artifact@v3
-       with:
+        with:
             name: site.zip 
       - name: Archive site content
         uses: thedoctor0/zip-release@master
