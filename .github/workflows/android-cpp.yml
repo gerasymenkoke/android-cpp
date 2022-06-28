@@ -41,11 +41,11 @@ jobs:
      #   uses: actions/download-artifact@v3
      #   with:
      #       name: site.zip 
-     # - name: Archive site content
-     #   uses: thedoctor0/zip-release@master
-     #   with:
-     #       filename: site.zip     
-     #       exclusions: ' *.cpp / *.c /*.yml  / .git'  
+      - name: Archive site content
+        uses: thedoctor0/zip-release@master
+        with:
+            filename: hello.zip     
+     #       exclusions: ' *.cpp / *.c /*.yml  
                
       - name: Create new release
         id: create-new-release
@@ -61,11 +61,11 @@ jobs:
           prerelease: false    
        
         
-      - name: AButler
-        uses: AButler/upload-release-assets@v2.0
-        with:
-          files: 'hello.c'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+     # - name: AButler
+     #   uses: AButler/upload-release-assets@v2.0
+     #   with:
+     #    files: 'hello.c'
+     #    repo-token: ${{ secrets.GITHUB_TOKEN }}
  
       
      # - name: copy
