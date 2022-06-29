@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(int number, int number1, int number2) {    
+int main(int number, char  number1, int number2) {    
 
      int  sum;
     
@@ -8,8 +8,8 @@ int main(int number, int number1, int number2) {
     // scanf("%d %d", &number1, &number2);
 
     // calculating sum
-    sum = number1 + number2;      
+    // sum = number1 + number2;      
     
-    printf("%d + %d = %d", number1, number2, sum);
+    printf("%s + %d = %d", number1, number2, sum);
     return 0;
 }
