@@ -31,8 +31,8 @@ jobs:
            ls -l
            chmod +x sum_of_two
            ./sum_of_two
-           1
-           2
+           1 2
+           
            
            
           # zip  -r site.zip  hello
