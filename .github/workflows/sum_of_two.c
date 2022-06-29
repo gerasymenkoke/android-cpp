@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(int number1, int number2) {    
+int main(int number, int number1, int number2) {    
 
      int  sum;
     
