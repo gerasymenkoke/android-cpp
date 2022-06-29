@@ -30,9 +30,9 @@ jobs:
            pwd 
            ls -l
            chmod +x sum_of_two
-           ./sum_of_two
-           2
-           3
+           ./sum_of_two 20 30
+           
+           
 
            
            
