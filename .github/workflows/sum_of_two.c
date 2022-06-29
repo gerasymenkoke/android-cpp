@@ -15,6 +15,7 @@ int main(int quantity, char  **number) {
     int num1 = number[1] - '0'; 
     int num2 = number[2] - '0'; 
     sum = num1 + num2;
+    printf("%d + %d", num1, num2);
     printf("sum = %d" , sum );
     return 0;
 }
