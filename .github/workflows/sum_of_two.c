@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include<stdlib.h>
+
 int main(int quantity, char  **number) {    
 
      int  sum;
@@ -12,8 +14,8 @@ int main(int quantity, char  **number) {
     sum=1;
 
     printf("%s %s", number[1], number[2]);
-    int num1 = number[1] - '0'; 
-    int num2 = number[2] - '0'; 
+    int num1 = atoi(number[1]); 
+    int num2 = atoi(number[2]); 
     sum = num1 + num2;
     printf("%d + %d", num1, num2);
     printf("sum = %d" , sum );
