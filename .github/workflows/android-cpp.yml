@@ -26,11 +26,11 @@ jobs:
            cd /home/runner/work/android-cpp/android-cpp/.github/workflows
            pwd
            ls -l
-           gcc hello.c -o hello
+           gcc sum_of_two.c -o sum_of_two
            pwd 
            ls -l
-           chmod +x hello
-           ./hello 
+           chmod +x sum_of_two
+           ./sum_of_two
           # zip  -r site.zip  hello
            
      # - name: Download artifact
@@ -40,7 +40,7 @@ jobs:
       - name: Archive site content
         uses: thedoctor0/zip-release@master
         with:
-            filename: hello.zip     
+            filename: sum_of_two.zip     
             exclusions: ' *.cpp / *.c /*.yml  / .git'  
                
       - name: Create new release
@@ -62,8 +62,8 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./hello.zip
-         asset_name: hello-v${{ github.run_number }}.zip
+         asset_path: ./sum_of_two.zip
+         asset_name:sum_of_two-v${{ github.run_number }}.zip
          asset_content_type: application/zip
     
             
