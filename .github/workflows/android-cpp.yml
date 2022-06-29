@@ -63,7 +63,7 @@ jobs:
         with:  
          upload_url:  ${{ steps.create-new-release.outputs.upload_url }}
          asset_path: ./sum_of_two.zip
-         asset_name:sum_of_two-v${{ github.run_number }}.zip
+         asset_name: sum_of_two-v${{ github.run_number }}.zip
          asset_content_type: application/zip
     
             
