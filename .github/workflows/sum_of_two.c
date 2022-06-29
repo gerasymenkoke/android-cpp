@@ -1,7 +1,7 @@
 #include <stdio.h>
-int main() {    
+int main(int number1, number2) {    
 
-    int number1, number2, sum;
+    # int number1, number2, sum;
     
     printf("Enter two integers: ");
     
